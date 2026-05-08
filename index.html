@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Máximo Gianetti, Technical Game Designer focused on gameplay systems, player psychology, level design, and rapid prototyping."
+    />
+    <title>Máximo Gianetti | Technical Game Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top">MG</a>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal" aria-label="Introduction">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Game Designer | Technical Game Designer</p>
+          <h1>Máximo Gianetti</h1>
+          <p class="hero-lede">
+            I design gameplay systems, levels, narrative flows, and prototypes that turn design
+            intent into something playable.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section reveal" aria-labelledby="about-title">
+        <div class="section-title">
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">Design + implementation.</h2>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>How I work</h3>
+            <p>
+              I connect design goals with engine-side prototypes: mechanics, level routes,
+              dialogue structures, balance ideas, and player-facing feedback loops.
+            </p>
+          </article>
+          <article>
+            <h3>What I focus on</h3>
+            <p>
+              Gameplay systems, player psychology, behavioral design, level design, narrative
+              systems, multiplayer interactions, engagement, and flow.
+            </p>
+          </article>
+          <article>
+            <h3>Languages</h3>
+            <p>Spanish native. English professional proficiency.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="projects" aria-labelledby="projects-title">
+        <div class="section-title large">
+          <p class="section-kicker">Selected Work</p>
+          <h2 id="projects-title">Featured Projects</h2>
+        </div>
+
+        <div class="featured-grid">
+          <article class="project-card feature-card">
+            <div class="project-media project-media-code" aria-hidden="true">
+              <span>Dialogue Graph</span>
+            </div>
+            <div class="project-content">
+              <p class="project-meta">Unreal Engine | Blueprints</p>
+              <h3>Narrative Dialogue System</h3>
+              <p>
+                Branching dialogue system based on player choices, interactive conversation flow,
+                and narrative outcomes.
+              </p>
+              <div class="tag-row" aria-label="Project skills">
+                <span>Technical Design</span>
+                <span>Narrative Design</span>
+                <span>Blueprints</span>
+              </div>
+              <ul class="project-list">
+                <li>Designed choice-driven dialogue structure.</li>
+                <li>Built branching narrative logic and flow.</li>
+              </ul>
+              <button class="project-toggle" type="button" data-project-toggle="dialogue">
+                Open project
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card feature-card">
+            <div class="project-media project-media-network" aria-hidden="true">
+              <span>Networked FPS</span>
+            </div>
+            <div class="project-content">
+              <p class="project-meta">Unity | Photon Fusion | C#</p>
+              <h3>Multiplayer FPS Prototype</h3>
+              <p>Networked FPS prototype focused on synchronized movement and shooting systems.</p>
+              <div class="tag-row" aria-label="Project skills">
+                <span>Networking</span>
+                <span>Combat Systems</span>
+                <span>Unity</span>
+              </div>
+              <ul class="project-list">
+                <li>Implemented multiplayer networking with Photon Fusion.</li>
+                <li>Developed synced movement and combat interactions.</li>
+              </ul>
+              <button class="project-toggle" type="button" data-project-toggle="fps">
+                Open project
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card feature-card">
+            <img
+              src="https://img.itch.zone/aW1nLzIxMzMwMDUyLnBuZw==/508x254%23mb/Fp7CeF.png"
+              alt="Rainbow High Survivors cover art"
+              class="project-image"
+            />
+            <div class="project-content">
+              <p class="project-meta">Godot | GDScript</p>
+              <h3>Survivor Roguelike Prototype</h3>
+              <p>
+                Roguelike shoot 'em up prototype with spawn waves, upgrades, combat loops, and
+                difficulty scaling.
+              </p>
+              <div class="tag-row" aria-label="Project skills">
+                <span>GDScript</span>
+                <span>Spawn Systems</span>
+                <span>Difficulty Scaling</span>
+              </div>
+              <a href="https://maxigianetti.itch.io/rainbow-high-survivors" target="_blank" rel="noreferrer">
+                View on itch.io
+              </a>
+              <button class="project-toggle" type="button" data-project-toggle="survivor">
+                Open project
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card feature-card">
+            <img
+              src="https://img.itch.zone/aW1nLzE1MjUyMzM3LnBuZw==/508x254%23mb/o8MF5o.png"
+              alt="Weather Guardian cover art"
+              class="project-image"
+            />
+            <div class="project-content">
+              <p class="project-meta">Unity | C# | Level Design</p>
+              <h3>Weather Guardian</h3>
+              <p>
+                3D platformer focused on exploration, collectables, traversal challenges, and
+                difficulty progression.
+              </p>
+              <div class="tag-row" aria-label="Project skills">
+                <span>Level Design</span>
+                <span>Traversal</span>
+                <span>Team Project</span>
+              </div>
+              <a href="https://maxigianetti.itch.io/weather-guardian" target="_blank" rel="noreferrer">
+                View on itch.io
+              </a>
+              <button class="project-toggle" type="button" data-project-toggle="weather">
+                Open project
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-sections" aria-live="polite">
+          <article class="project-section" id="project-dialogue" data-project-detail="dialogue" hidden>
+            <div class="project-section-header">
+              <div>
+                <p class="section-kicker">Project</p>
+                <h3>Narrative Dialogue System</h3>
+              </div>
+              <button class="project-close" type="button" data-project-close>Back to projects</button>
+            </div>
+            <div class="project-showcase">
+              <div class="project-video-placeholder">Add trailer, gameplay capture, or dialogue demo</div>
+              <div class="project-facts">
+                <span>Role</span><strong>Gameplay Designer & Programmer</strong>
+                <span>Tools</span><strong>Unreal Engine, Blueprints</strong>
+                <span>Focus</span><strong>Branching logic, narrative outcomes, player choices</strong>
+              </div>
+            </div>
+            <div class="project-writeup">
+              <section>
+                <h4>Overview</h4>
+                <p>Technical design prototype for choice-driven dialogue and interactive narrative flow.</p>
+              </section>
+              <section>
+                <h4>Contributions</h4>
+                <p>Designed branching conversation structure and implemented player-facing dialogue logic.</p>
+              </section>
+              <section>
+                <h4>Media</h4>
+                <p>Use this area for screenshots of graphs, in-game UI, or a short video demo.</p>
+              </section>
+            </div>
+            <div class="project-gallery">
+              <div>Add screenshot 16:9</div>
+              <div>Add graph capture 16:9</div>
+              <div>Add gameplay still 16:9</div>
+            </div>
+          </article>
+
+          <article class="project-section" id="project-fps" data-project-detail="fps" hidden>
+            <div class="project-section-header">
+              <div>
+                <p class="section-kicker">Project</p>
+                <h3>Multiplayer FPS Prototype</h3>
+              </div>
+              <button class="project-close" type="button" data-project-close>Back to projects</button>
+            </div>
+            <div class="project-showcase">
+              <div class="project-video-placeholder">Add trailer, gameplay capture, or network test video</div>
+              <div class="project-facts">
+                <span>Role</span><strong>Gameplay Designer & Programmer</strong>
+                <span>Tools</span><strong>Unity, Photon Fusion, C#</strong>
+                <span>Focus</span><strong>Networking, combat sync, movement feel</strong>
+              </div>
+            </div>
+            <div class="project-writeup">
+              <section>
+                <h4>Overview</h4>
+                <p>Networked FPS prototype focused on readable movement, shooting, and multiplayer sync.</p>
+              </section>
+              <section>
+                <h4>Contributions</h4>
+                <p>Implemented Photon Fusion networking and synchronized player movement and combat interactions.</p>
+              </section>
+              <section>
+                <h4>Media</h4>
+                <p>Use this area for clips showing multiplayer sync, weapons, or movement tests.</p>
+              </section>
+            </div>
+            <div class="project-gallery">
+              <div>Add gameplay 16:9</div>
+              <div>Add sync test 16:9</div>
+              <div>Add combat screenshot 16:9</div>
+            </div>
+          </article>
+
+          <article class="project-section" id="project-survivor" data-project-detail="survivor" hidden>
+            <div class="project-section-header">
+              <div>
+                <p class="section-kicker">Project</p>
+                <h3>Survivor Roguelike Prototype</h3>
+              </div>
+              <button class="project-close" type="button" data-project-close>Back to projects</button>
+            </div>
+            <div class="project-showcase">
+              <img src="https://img.itch.zone/aW1nLzIxMzMwMDUyLnBuZw==/508x254%23mb/Fp7CeF.png" alt="Rainbow High Survivors cover art" />
+              <div class="project-facts">
+                <span>Role</span><strong>Gameplay Designer & Programmer</strong>
+                <span>Tools</span><strong>Godot, GDScript</strong>
+                <span>Focus</span><strong>Spawn systems, combat loops, difficulty scaling</strong>
+              </div>
+            </div>
+            <div class="project-writeup">
+              <section>
+                <h4>Overview</h4>
+                <p>Roguelike shoot 'em up prototype exploring pressure, pacing, upgrades, and enemy waves.</p>
+              </section>
+              <section>
+                <h4>Contributions</h4>
+                <p>Programmed gameplay systems, enemy spawn behavior, and difficulty scaling in GDScript.</p>
+              </section>
+              <section>
+                <h4>Link</h4>
+                <p><a href="https://maxigianetti.itch.io/rainbow-high-survivors" target="_blank" rel="noreferrer">View on itch.io</a></p>
+              </section>
+            </div>
+            <div class="project-gallery">
+              <div>Add gameplay 16:9</div>
+              <div>Add enemy wave 16:9</div>
+              <div>Add upgrade UI 16:9</div>
+            </div>
+          </article>
+
+          <article class="project-section" id="project-weather" data-project-detail="weather" hidden>
+            <div class="project-section-header">
+              <div>
+                <p class="section-kicker">Project</p>
+                <h3>Weather Guardian</h3>
+              </div>
+              <button class="project-close" type="button" data-project-close>Back to projects</button>
+            </div>
+            <div class="project-showcase">
+              <img src="https://img.itch.zone/aW1nLzE1MjUyMzM3LnBuZw==/508x254%23mb/o8MF5o.png" alt="Weather Guardian cover art" />
+              <div class="project-facts">
+                <span>Role</span><strong>Game and Level Designer</strong>
+                <span>Tools</span><strong>Unity, C#</strong>
+                <span>Focus</span><strong>Traversal routes, obstacle patterns, difficulty progression</strong>
+              </div>
+            </div>
+            <div class="project-writeup">
+              <section>
+                <h4>Overview</h4>
+                <p>3D platforming project centered on exploration, collectibles, and traversal challenges.</p>
+              </section>
+              <section>
+                <h4>Contributions</h4>
+                <p>Designed platforming levels, traversal routes, obstacle patterns, and progression pacing.</p>
+              </section>
+              <section>
+                <h4>Link</h4>
+                <p><a href="https://maxigianetti.itch.io/weather-guardian" target="_blank" rel="noreferrer">View on itch.io</a></p>
+              </section>
+            </div>
+            <div class="project-gallery">
+              <div>Add gameplay 16:9</div>
+              <div>Add level route 16:9</div>
+              <div>Add collectible path 16:9</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="more-title">
+        <div class="section-title large">
+          <p class="section-kicker">Archive</p>
+          <h2 id="more-title">Other Projects</h2>
+        </div>
+        <div class="archive-grid">
+          <a class="archive-item" href="https://maxigianetti.itch.io/wise-guy" target="_blank" rel="noreferrer">
+            <img src="https://img.itch.zone/aW1nLzIxODg2NTUxLnBuZw==/508x254%23mb/qAyxJq.png" alt="Wise Guy cover art" />
+            <span>Wise Guy</span>
+            <small>Unity work-in-progress prototype</small>
+          </a>
+          <a class="archive-item" href="https://maxigianetti.itch.io/punk-city" target="_blank" rel="noreferrer">
+            <img src="https://img.itch.zone/aW1nLzE4NjgwMTI3LnBuZw==/315x250%23c/TbUj%2FD.png" alt="Punk City cover art" />
+            <span>Punk City</span>
+            <small>Cyber city platformer prototype</small>
+          </a>
+          <a class="archive-item" href="https://maxigianetti.itch.io/crnica-de-un-homicidio" target="_blank" rel="noreferrer">
+            <img src="https://img.itch.zone/aW1nLzkyMjM5NjMucG5n/315x250%23c/YqcrM3.png" alt="Crónica de un homicidio cover art" />
+            <span>Crónica de un homicidio</span>
+            <small>Interactive fiction made with Twine</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="section skills-section reveal" id="skills" aria-labelledby="skills-title">
+        <div class="section-title">
+          <p class="section-kicker">Capabilities</p>
+          <h2 id="skills-title">Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div>
+            <h3>Programming</h3>
+            <p>C#, C++, GDScript, Unreal Blueprints</p>
+          </div>
+          <div>
+            <h3>Game Design</h3>
+            <p>Gameplay systems, level design, balancing, economy, documentation</p>
+          </div>
+          <div>
+            <h3>Player Experience</h3>
+            <p>Player psychology, behavioral design, engagement, flow, profiling</p>
+          </div>
+          <div>
+            <h3>Engines</h3>
+            <p>Unity, Unreal Engine, Godot</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education-section reveal" id="education" aria-labelledby="education-title">
+        <div class="section-title">
+          <p class="section-kicker">Background</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span>Aug 2024 - Present</span>
+            <h3>Associate Degree - Game Engines Programming</h3>
+            <p>Image Campus</p>
+          </article>
+          <article class="timeline-item">
+            <span>Feb 2022 - Jul 2024</span>
+            <h3>Associate Degree - Game Design and Game Production</h3>
+            <p>Image Campus</p>
+          </article>
+          <article class="timeline-item">
+            <span>Aug 2025 - Dec 2025</span>
+            <h3>Teaching Assistant - Player Psychology for Game Design</h3>
+            <p>
+              Player archetypes, motivation, conditioning, profiling, segmentation, Gestalt,
+              GameFeel, engagement, and flow states.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section reveal" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Contact</h2>
+          <p>
+            Have a project, prototype, or design role to discuss? Send a message or reach me through
+            any of these links.
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:maximo.gianetti@hotmail.com">maximo.gianetti@hotmail.com</a>
+            <a href="https://www.linkedin.com/in/maximo-gianetti/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://maxigianetti.itch.io" target="_blank" rel="noreferrer">itch.io</a>
+            <span>Buenos Aires, Argentina</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>Your Name</span>
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Your Email</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Your Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Message</button>
+          <p class="form-note">This opens your email app with the message prepared.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Máximo Gianetti</span>
+      <span>Game Designer | Technical Game Designer</span>
+    </footer>
+  </body>
+</html>
