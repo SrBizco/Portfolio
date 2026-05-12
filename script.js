@@ -65,6 +65,85 @@ document.querySelectorAll("[data-project-close]").forEach((closeButton) => {
   });
 });
 
+const lightbox = document.querySelector("#gallery-lightbox");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+const lightboxClose = document.querySelector("[data-lightbox-close]");
+const lightboxPrev = document.querySelector("[data-lightbox-prev]");
+const lightboxNext = document.querySelector("[data-lightbox-next]");
+const galleryImages = Array.from(document.querySelectorAll(".project-gallery img"));
+let activeImageIndex = 0;
+
+const showLightboxImage = (index) => {
+  if (!lightbox || !lightboxImage || !lightboxCaption || galleryImages.length === 0) {
+    return;
+  }
+
+  activeImageIndex = (index + galleryImages.length) % galleryImages.length;
+  const image = galleryImages[activeImageIndex];
+  lightboxImage.src = image.currentSrc || image.src;
+  lightboxImage.alt = image.alt;
+  lightboxCaption.textContent = image.alt;
+};
+
+const openLightbox = (index) => {
+  if (!lightbox) {
+    return;
+  }
+
+  showLightboxImage(index);
+  lightbox.hidden = false;
+  document.body.classList.add("is-lightbox-open");
+  lightboxClose?.focus();
+};
+
+const closeLightbox = () => {
+  if (!lightbox) {
+    return;
+  }
+
+  lightbox.hidden = true;
+  document.body.classList.remove("is-lightbox-open");
+};
+
+galleryImages.forEach((image, index) => {
+  image.tabIndex = 0;
+  image.setAttribute("role", "button");
+  image.setAttribute("aria-label", `Open ${image.alt}`);
+
+  image.addEventListener("click", () => openLightbox(index));
+  image.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox(index);
+    }
+  });
+});
+
+lightboxClose?.addEventListener("click", closeLightbox);
+lightboxPrev?.addEventListener("click", () => showLightboxImage(activeImageIndex - 1));
+lightboxNext?.addEventListener("click", () => showLightboxImage(activeImageIndex + 1));
+
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!lightbox || lightbox.hidden) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    closeLightbox();
+  } else if (event.key === "ArrowLeft") {
+    showLightboxImage(activeImageIndex - 1);
+  } else if (event.key === "ArrowRight") {
+    showLightboxImage(activeImageIndex + 1);
+  }
+});
+
 const contactForm = document.querySelector("#contact-form");
 
 contactForm?.addEventListener("submit", (event) => {
