@@ -693,6 +693,11 @@ h2 {
   display: block;
 }
 
+.project-showcase > .project-showcase-contain {
+  object-fit: contain;
+  background: rgba(16, 18, 21, 0.82);
+}
+
 .archive-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -875,13 +880,16 @@ h2 {
   font-size: 0.92rem;
 }
 
-.js .reveal {
-  opacity: 0.94;
+.js .reveal,
+.js .reveal-item {
+  opacity: 0;
   transform: translateY(18px);
   transition: opacity 650ms ease, transform 650ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
-.js .reveal.is-visible {
+.js .reveal.is-visible,
+.js .reveal-item.is-visible {
   opacity: 1;
   transform: translateY(0);
 }

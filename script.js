@@ -1,6 +1,27 @@
 document.documentElement.classList.add("js");
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealItemSelectors = [
+  ".about-grid article",
+  ".project-card",
+  ".project-section-header",
+  ".project-showcase",
+  ".project-writeup section",
+  ".project-gallery img",
+  ".archive-item",
+  ".skills-grid > div",
+  ".timeline-item",
+  ".contact-methods > *",
+  ".contact-form label",
+  ".contact-form .button",
+  ".form-note",
+];
+
+document.querySelectorAll(revealItemSelectors.join(",")).forEach((element, index) => {
+  element.classList.add("reveal-item");
+  element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 55}ms`);
+});
+
+const revealElements = document.querySelectorAll(".reveal, .reveal-item");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
