@@ -306,6 +306,12 @@ h2 {
   gap: 18px;
 }
 
+.project-group-heading {
+  margin: 36px 0 18px;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
 .project-card {
   min-width: 0;
   overflow: hidden;
@@ -748,6 +754,7 @@ h2 {
 }
 
 .skills-section,
+.work-section,
 .education-section,
 .contact-section {
   display: grid;
@@ -775,6 +782,10 @@ h2 {
 }
 
 .timeline-item h3 {
+  margin-top: 8px;
+}
+
+.timeline-item p + p {
   margin-top: 8px;
 }
 
@@ -911,6 +922,7 @@ h2 {
 @media (max-width: 900px) {
   .hero,
   .skills-section,
+  .work-section,
   .education-section,
   .contact-section {
     grid-template-columns: 1fr;
